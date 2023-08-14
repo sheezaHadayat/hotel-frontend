@@ -54,7 +54,7 @@ export function MyBookings(){
     useEffect(() => {
         async function fetchBookingData() {
           try {
-            const rooms = await(await axios.post('http://localhost:5000/bookings/getbookingbyuserid', { userid: user._id })).data;
+            const rooms = await(await axios.post('https://cloudy-sock-goat.cyclic.app/bookings/getbookingbyuserid', { userid: user._id })).data;
            
             console.log(rooms);
             setbookings(rooms)
@@ -69,7 +69,7 @@ export function MyBookings(){
       async function cancelBooking(bookingid, roomid){
         try {
             setloading(true)
-            const result = await(await axios.post('http://localhost:5000/bookings/cancelbooking', { bookingid: roomid })).data;
+            const result = await(await axios.post('https://cloudy-sock-goat.cyclic.app/bookings/cancelbooking', { bookingid: roomid })).data;
            console.log(result)
            setloading(false)
           swal.fire('Congrats', 'Your Booking has been Cancelled', 'success').then(result=>{

@@ -60,7 +60,7 @@ export function Bookings() {
         const fetchData = async () => {
             try {
 
-                const data = await (await axios.get('http://localhost:5000/bookings/getallbookings')).data;
+                const data = await (await axios.get('https://cloudy-sock-goat.cyclic.app/bookings/getallbookings')).data;
                 setbookings(data);
                 setLoading(false)
                 // Do something with the fetched data
@@ -130,7 +130,7 @@ export function Rooms() {
         const fetchData = async () => {
             try {
 
-                const data = await (await axios.get('http://localhost:5000/rooms/getallrooms')).data;
+                const data = await (await axios.get('https://cloudy-sock-goat.cyclic.app/rooms/getallrooms')).data;
                 setrooms(data);
                 setLoading(false)
                 // Do something with the fetched data
@@ -202,7 +202,7 @@ export function Users() {
         const fetchData = async () => {
             try {
 
-                const data = await (await axios.get('http://localhost:5000/users/getallusers')).data;
+                const data = await (await axios.get('https://cloudy-sock-goat.cyclic.app/users/getallusers')).data;
                 setusers(data);
                 setLoading(false)
                 // Do something with the fetched data
@@ -288,7 +288,7 @@ export function Addroom(){
         }
         try {
             setLoading(true)
-            const result= await (await axios.post('http://localhost:5000/rooms/addroom', newroom)).data;
+            const result= await (await axios.post('https://cloudy-sock-goat.cyclic.app/rooms/addroom', newroom)).data;
             console.log(result)
             Swal.fire("congrats", "New room added successfully" , "suceess").then(result=>{
                 window.location.href="/home"

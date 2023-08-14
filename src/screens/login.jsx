@@ -24,7 +24,7 @@ async function login(){
   try {
     setloading(true)
     // console.log(user)
-    const result = await axios.post('http://localhost:5000/users/login',user)
+    const result = await axios.post('https://cloudy-sock-goat.cyclic.app/users/login',user)
     const response=result.data;
     setloading(false)
     
