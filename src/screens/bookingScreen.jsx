@@ -24,7 +24,7 @@ if (!localStorage.getItem("currentUser")){
             try {
                 setloading(true);
 
-                const data = (await axios.post('https://cloudy-sock-goat.cyclic.app/rooms/getroombyid', { roomid: match.params.roomid })).data
+                const data = (await axios.post('http://localhost:5000/rooms/getroombyid', { roomid: match.params.roomid })).data
                 settotalamount(data.rentperday * totaldays)
                 // console.log(data)
                 setroom(data);
@@ -54,7 +54,7 @@ if (!localStorage.getItem("currentUser")){
             token
         };
         try {
-            const result = await axios.post("https://cloudy-sock-goat.cyclic.app/bookings/bookroom", bookingDetails)
+            const result = await axios.post("http://localhost:5000/bookings/bookroom", bookingDetails)
         } catch (error) {
 
         }
@@ -104,7 +104,7 @@ if (!localStorage.getItem("currentUser")){
                                     <StripeCheckout
                                         amount={totalamount * 100}
                                         token={onToken}
-                                        currency='PKR'
+                                        currency='pkr'
                                         stripeKey="pk_test_51NeHo4IWQ9Gu2tLentu15AitAF0o1q1RlrYng4Pu6eXp1sqsrqal6n9YIYaiNrQqRYGakte5DbOLUEoZdycROcYf00hRPWxeJO"
                                     >
 

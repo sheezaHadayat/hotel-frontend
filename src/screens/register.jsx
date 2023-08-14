@@ -24,7 +24,7 @@ async function register(){
       }
   try {
      setloading(true)
-    const result = (await axios.post('https://cloudy-sock-goat.cyclic.app/users/register',user)).data
+    const result = (await axios.post('http://localhost:5000/users/register',user)).data
     setloading(false)
     setsuccess(true)
     setname('')
