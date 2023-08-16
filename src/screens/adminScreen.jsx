@@ -12,7 +12,7 @@ export default function AdminScreen() {
         if(!JSON.parse(localStorage.getItem("currentUser")).isAdmin){
         window.location.href='/home'
         }
-
+        
     },[])
 
     return (
@@ -159,7 +159,7 @@ export function Rooms() {
                             <th>Type</th>
                             <th>Rent per day </th>
                             <th>Max Count</th>
-                            <th>Phone Number</th>
+                            {/* <th>Phone Number</th> */}
                         </tr>
                     </thead>
                     <tbody>
@@ -172,7 +172,7 @@ export function Rooms() {
                         <td>{room.type}   </td>
                         <td>{room.rentperday}   </td>
                         <td>{room.maxcount}   </td>
-                        <td>{room.phonenumber}   </td>
+                        {/* <td>{room.phonenumber}   </td> */}
                     </tr>
 
                 }

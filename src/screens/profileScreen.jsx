@@ -93,6 +93,11 @@ export function MyBookings(){
 <div className="row">
     <div className="col-md-6">
         {loading && <h2>Loading...</h2>}
+        {user.isAdmin && (
+           window.location.href='/admin'
+          
+        // <a href="/admin">Go to Admin Panel</a>
+      )}
         {bookings && (bookings.map(booking=>{
             return <div className='bs'>
                
