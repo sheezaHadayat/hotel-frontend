@@ -8,6 +8,7 @@ import { DatePicker, Space } from 'antd';
 const { RangePicker } = DatePicker;
 
 
+
 export default function HomeScreen() {
 
   const [rooms, setrooms] = useState([]);
@@ -39,22 +40,17 @@ export default function HomeScreen() {
 
     fetchRooms(); // Call the async function inside useEffect
   }, []);
-  // function filterByDate(dates) {
-  //   if (!Array.isArray(dates) || dates.length < 2) {
-  //     console.error('Invalid dates array');
-  //     return;
-  //   }
-  //   // console.log(dates)
-  //     setfromdate(moment(dates[0]).format('DD-MM-YYYY'))
-  //     settodate(moment(dates[1]).format('DD-MM-YYYY'))
-  //   // console.log(moment(dates[0]).format('DD-MM-YYYY'));
-  //   // console.log(moment(dates[1]).format('DD-MM-YYYY'));
-  // }
-
+ 
   function filterByDate(dates) {
+//  console.log(dates)
 
-    setfromdate(moment(dates[0]).format('DD-MM-YYYY'))
-    settodate(moment(dates[1]).format('DD-MM-YYYY'))
+// console.log('Formatted Start Date:', moment(dates[0].$d).format('DD-MM-YYYY'));
+// console.log('Formatted End Date:', moment(dates[1].$d).format('DD-MM-YYYY'));
+
+
+    
+    setfromdate(moment(dates[0].$d).format('DD-MM-YYYY'))
+    settodate(moment(dates[1].$d).format('DD-MM-YYYY'))
 
 
     var temproom = []
@@ -63,14 +59,14 @@ export default function HomeScreen() {
       if (room.currentbookings.length > 0) {
         for (const booking of room.currentbookings) {
           if (
-            !moment(moment(dates[0]).format('DD-MM-YYYY')).isBetween(booking.fromdate, booking.todate)
-            && !moment(moment(dates[1]).format('DD-MM-YYYY')).isBetween(booking.fromdate, booking.todate)
+            !moment(moment(dates[0].$d).format('DD-MM-YYYY')).isBetween(booking.fromdate, booking.todate)
+            && !moment(moment(dates[1].$d).format('DD-MM-YYYY')).isBetween(booking.fromdate, booking.todate)
           ) {
 
-            if (moment(dates[0]).format('DD-MM-YYYY') !== booking.fromdate &&
-              moment(dates[0]).format('DD-MM-YYYY') !== booking.todate &&
-              moment(dates[1]).format('DD-MM-YYYY') !== booking.fromdate &&
-              moment(dates[1]).format('DD-MM-YYYY') !== booking.todate
+            if (moment(dates[0].$d).format('DD-MM-YYYY') !== booking.fromdate &&
+              moment(dates[0].$d).format('DD-MM-YYYY') !== booking.todate &&
+              moment(dates[1].$d).format('DD-MM-YYYY') !== booking.fromdate &&
+              moment(dates[1].$d).format('DD-MM-YYYY') !== booking.todate
 
 
             ) {
@@ -88,7 +84,7 @@ export default function HomeScreen() {
 
       setrooms(temproom)
     }
-
+  
   }
 function filterBySearch(){
   const temprooms=duplicaterooms.filter(room=>room.name.toLowerCase().includes(searchkey.toLowerCase()))
