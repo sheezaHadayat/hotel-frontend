@@ -26,7 +26,7 @@ export default function Room({ room,fromdate,todate }) {
       <div className='col-md-7'>
         <h2>{room.name}</h2>
         <p>Type: {room.type}</p>
-        <p>Rent per Day: ${room.rentperday}</p>
+        <p>Rent per Day: PKR{room.rentperday}</p>
         <p>Phone Number: {room.phonenumber}</p>
         <p>Max Count: {room.maxcount}</p>
         <div style={{ float: "right" }}>
