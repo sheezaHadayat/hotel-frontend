@@ -76,7 +76,7 @@ if (!localStorage.getItem("currentUser")){
                 {loading ? <h1>Loading....</h1> : error ? <h1>Error</h1> :
                     (<div>
                         <div className='row m-1'>
-                            <div className='col-md-5'>
+                            <div className='col-md-5 '>
                                 <h2>{room.name}</h2>
                                 <img src={room.imageurls[0]} className="bigimg" />
 

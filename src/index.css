@@ -56,6 +56,9 @@ h2{
   border-radius: 5px !important;
   padding: 20px;
 }
+.lnh2{
+  font-size: 100px;
+}
 .bigimg{
   height: 400px;
 }
@@ -65,4 +68,19 @@ input,select, .ant-picker{
   width: 100%;
   border-radius: 2px !important;
   height: 35px !important;
+}
+@media (max-width: 768px) {
+  .big {
+    max-width: 100%; 
+    height: auto;  
+  }
+  h2{
+    font-size: 14px;
+  } 
+  .lnh2{
+    font-size: 30px;
+  }
+  .lnh3{
+    font-size: 20px;
+  }
 }
