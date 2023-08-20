@@ -87,7 +87,9 @@ if (!localStorage.getItem("currentUser")){
                                     <b><p>Name:{JSON.parse(localStorage.getItem('currentUser')).name}</p>
                                         <p>From Date:{match.params.fromdate} </p>
                                         <p>To Date: {match.params.todate}</p>
-                                        <p>Max Count: {room.maxcount}</p></b></div>
+                                        {/* <p>Max Count: {room.maxcount}</p> */}
+                                        </b>
+                                        </div>
                                 <div >
                                     <b>
                                         <h2>Amount</h2>
