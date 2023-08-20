@@ -24,7 +24,7 @@ if (!localStorage.getItem("currentUser")){
             try {
                 setloading(true);
 
-                const data = (await axios.post('http://localhost:5000/rooms/getroombyid', { roomid: match.params.roomid })).data
+                const data = (await axios.post('https://cloudy-sock-goat.cyclic.app/rooms/getroombyid', { roomid: match.params.roomid })).data
                 settotalamount(data.rentperday * totaldays)
                 // console.log(data)
                 setroom(data);
@@ -54,7 +54,7 @@ if (!localStorage.getItem("currentUser")){
             token
         };
         try {
-            const result = await axios.post("http://localhost:5000/bookings/bookroom", bookingDetails)
+            const result = await axios.post("https://cloudy-sock-goat.cyclic.app/bookings/bookroom", bookingDetails)
         } catch (error) {
 
         }

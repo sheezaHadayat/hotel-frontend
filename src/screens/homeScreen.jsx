@@ -26,7 +26,7 @@ export default function HomeScreen() {
       try {
         setloading(true);
 
-        const data = (await axios.get('http://localhost:5000/rooms/getallrooms')).data
+        const data = (await axios.get('https://cloudy-sock-goat.cyclic.app/rooms/getallrooms')).data
 
         setrooms(data);
         setduplicaterooms(data)
