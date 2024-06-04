@@ -12,7 +12,7 @@ export default function ProfileScreen() {
 
     useEffect(()=>{
         if (!user) {
-            window.location.href="/homeScreen"
+            window.location.href="/home"
         }
 
     },[])
