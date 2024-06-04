@@ -7,7 +7,7 @@ export default function LandingScreen() {
         <div className="col-md-9 my-auto text-center" style={{borderRight:'8px solid white'}}>
             <h2 className='lnh2' style={{color:'white',fontWeight:'bold' }}>Hotel Booking</h2>
             <h3 className="lnh3" style={{color:'white', marginTop:'50px'}}>Taking luxury to new levels </h3>
-            <Link to ="/login">
+            <Link to ="/home">
             <button className='btn' style={{backgroundColor:'white', color:'black', marginTop:'20px'}}>Get Started </button> 
             </Link>
         </div>
